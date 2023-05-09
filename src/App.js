@@ -1,47 +1,33 @@
-import './App.scss'
-import { useEffect, useState } from 'react'
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes";
+import { DefaultLayout } from "./components/Layout";
 
 function App() {
-  const [users, setUsers] = useState([])
+    return (
+        <Router>
+            <div className="App">
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        const Page = route.component;
+                        const Layout = route.layout || DefaultLayout;
 
-  useEffect(() => {
-    const url = 'https://jsonplaceholder.typicode.com/users'
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
-        const data = res.map((item, index) => {
-          const str = `street: ${item.address.street}, suite: ${item.address.suite}, city: ${item.address.city}`
-          return { ...item, address: str }
-        });
-        setUsers(data)
-      });
-  }, [])
-
-  const handleDelete = id => {
-    const index = users.filter((item, index)=>{
-      console.log(id)
-      console.log(item.id)
-      return item.id !== id
-    })
-    
-    setUsers(index)
-    console.log(index)
-  }
-
-  return (
-    <div className="App">
-      <ul>
-        {users.map(user => (
-          <li key={user.id} onClick={e => { handleDelete(user.id) }}>
-            <p>ID: {user.username}</p>
-            <p>Email: {user.email}</p>
-            <p>Address: {user.address}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
+                    })}
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
-export default App
+export default App;

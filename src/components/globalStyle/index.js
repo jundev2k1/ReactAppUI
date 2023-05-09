@@ -1,8 +1,8 @@
-import style from './globalStyle.module.css'
+import style from './globalStyle.scss'
 
-function GlobalStyle({child}){
+function GlobalStyle({children}){
     
-    return child
+    return children
 }
 
 export default GlobalStyle

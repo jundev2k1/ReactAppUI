@@ -1,0 +1,66 @@
+.footer {
+  padding: 40px 0;
+
+  .fast-link {
+    h2 {
+      margin: 20px 0;
+      font-size: 20px;
+      color: #fff;
+    }
+    button {
+      color: #d3d3d3;
+      font-size: 12px;
+      line-height: 36px;
+      display: block;
+    }
+    button:hover {
+      color: #eee;
+    }
+  }
+  .statistical {
+    h2 {
+      font-size: 20px;
+      color: #fff;
+      margin: 20px 0;
+
+      button {
+        color: #d4d4d4;
+        margin-left: 12px;
+      }
+      button:hover {
+        color: #b4b4b4;
+      }
+      ul {
+        li {
+          margin-bottom: 12px;
+
+          button {
+            width: 100%;
+            color: #fff;
+            font-weight: bold;
+          }
+          label {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            display: block;
+          }
+          span {
+            text-align: center;
+            color: #d3d3d3;
+            display: block;
+          }
+        }
+
+        li:nth-child(2) {
+          label {
+            text-align: left;
+          }
+          span {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
