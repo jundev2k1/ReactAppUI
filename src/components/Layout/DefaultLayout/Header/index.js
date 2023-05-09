@@ -1,15 +1,17 @@
+import './header.scss'
+
 function Header() {
   return (
-    <section classNameName="navbar-menu">
+    <section className="navbar-menu">
       <div className="menu">
         <nav className="navbar navbar-expand-lg d-flex">
           <div className="container">
-            <div classNameName="logo">
-              <a classNameName="navbar-brand" asp-route="Home">
+            <div className="logo">
+              <a className="navbar-brand" asp-route="Home">
                 JunPik
               </a>
               <button
-                classNameName="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -17,22 +19,22 @@ function Header() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span classNameName="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
             </div>
-            <div classNameName="list-menu">
-              <div classNameName="collapse navbar-collapse row" id="navbarNav">
-                <div classNameName="col-lg-8">
-                  <ul classNameName="navbar-nav main-menu">
-                    <li classNameName="nav-item dropdown">
+            <div className="list-menu">
+              <div className="collapse navbar-collapse row" id="navbarNav">
+                <div className="col-lg-8">
+                  <ul className="navbar-nav main-menu">
+                    <li className="nav-item dropdown">
                       <a
-                        classNameName="nav-link dropdown-toggle"
+                        className="nav-link dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <i classNameName="fa fa-list-check"></i> Tất cả danh mục
+                        <i className="fa fa-list-check"></i> Tất cả danh mục
                       </a>
                       <ul className="dropdown-menu">
                         <li>

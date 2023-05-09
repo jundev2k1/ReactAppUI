@@ -4,7 +4,6 @@ import Explore from '../pages/Explore'
 // Route Public
 const publicRoutes = [
     {path: '/', component: Home},
-    {path: '/home', component: Home},
     {path: '/explore', component: Explore}
 ]
 // Route Private (Redirect Login if not Login)

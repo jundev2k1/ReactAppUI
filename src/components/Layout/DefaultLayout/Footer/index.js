@@ -40,7 +40,6 @@ function Footer() {
             <h2>
               Theo chúng tôi
               <button >
-                <FontAwesomeIcon icon={icon({name: 'facebook', style: 'brands'})} />
                 <i className="fa-brands fa-facebook"></i>
               </button>
               <button >

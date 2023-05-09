@@ -1,4 +1,5 @@
-import style from './globalStyle.scss'
+import './globalStyle.scss'
+import './import.scss'
 
 function GlobalStyle({children}){
     
